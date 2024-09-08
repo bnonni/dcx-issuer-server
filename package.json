@@ -1,0 +1,42 @@
+{
+  "name": "dcx-issuer-server",
+  "version": "0.0.1",
+  "description": "DCX Issuer Server implements the IssuerServer class in the @dcx-protocol/server as a REST-like web server",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "rimraf dist && rimraf dist/esm && tsc",
+    "start": "npm run build && node ./dist/esm/index.js",
+    "update": "ncu -u && npm install"
+  },
+  "contributors": [
+    {
+      "name": "Bryan Nonni",
+      "url": "https://github.com/bnonni"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@dcx-protocol/common": "^7.0.0",
+    "@dcx-protocol/issuer": "^7.0.0",
+    "@dcx-protocol/server": "^7.0.0",
+    "@sendgrid/mail": "^8.1.3",
+    "@web5/agent": "0.7.0",
+    "@web5/api": "^0.10.0",
+    "@web5/common": "^1.0.2",
+    "@web5/credentials": "^1.1.1",
+    "@web5/crypto": "^1.0.4",
+    "@web5/dids": "^1.1.4",
+    "@web5/user-agent": "^0.6.0",
+    "twilio": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.9.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
